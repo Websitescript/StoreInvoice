@@ -1,4 +1,4 @@
-# Store Invoice Generator V2 (Android)
+# Store Invoice Generator (Android)
 
 Offline invoice app that reproduces the store's thermal-receipt invoice (216 x 842.5 pt, Courier-style 8.5 pt, 40 columns,
 Code 128 barcodes, terms page) and fills only the dynamic fields.
@@ -17,7 +17,7 @@ Local build: `gradle assembleDebug` (JDK 17, Android SDK 34).
 * Product-type HSN defaults (editable under Product types): 85102000 trimmer, 85183020 earphones/neckband, 85183010 headset - please verify with the client's CA.
 
 ## V2 changes
-* Company line, store name, CIN, Regd. office (3 lines), website/brand name (e.g. falah.com) and support email are all editable in Store Settings and per invoice.
+* Store name (two lines), CIN, Regd. office (3 lines), website/brand name (e.g. falah.com) and support email are all editable in Store Settings and per invoice.
 * Order number is editable (SOA + 12 digits). History has **Re-create**, which loads a saved invoice back into the form so a lost/deleted record can be rebuilt with the same date and order number.
 * Barcodes now follow the invoice content directly (no blank gap); terms follow on the same page when they fit.
 * Labels above every field. Same package id as V1 - export a JSON backup first; GitHub debug builds use a new signing key each run, so uninstall the old APK before installing a new build and re-import.

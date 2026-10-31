@@ -28,7 +28,7 @@ class MainActivity : Activity() {
     override fun onCreate(b: Bundle?) {
         super.onCreate(b)
         repo = Repo(this); ui = Ui(this); inv = InvoiceScreen(this)
-        titleTv = ui.text("Store Invoice Generator V2", 18f, true, Color.WHITE).apply { setPadding(ui.dp(16), ui.dp(14), ui.dp(16), ui.dp(14)); setBackgroundColor(ui.accent) }
+        titleTv = ui.text("Store Invoice Generator", 18f, true, Color.WHITE).apply { setPadding(ui.dp(16), ui.dp(14), ui.dp(16), ui.dp(14)); setBackgroundColor(ui.accent) }
         content = FrameLayout(this)
         val nav = LinearLayout(this).apply { setBackgroundColor(Color.WHITE) }
         listOf("home" to "Home", "invoice" to "Invoice", "products" to "Products", "customers" to "Customers", "history" to "History").forEach { (k, l) ->
@@ -152,9 +152,9 @@ class MainActivity : Activity() {
     // ---------------- Store settings ----------------
     private fun storeSettings() {
         val s = repo.store; val t = repo.settings
-        val n = ui.field("Store name", s.name); val a1 = ui.field("Address line 1", s.a1); val a2 = ui.field("Address line 2", s.a2); val a3 = ui.field("Address line 3", s.a3)
+        val n = ui.field("Store name – line 2", s.name); val a1 = ui.field("Address line 1", s.a1); val a2 = ui.field("Address line 2", s.a2); val a3 = ui.field("Address line 3", s.a3)
         val ph = ui.field("Phone number (use / for a second number)", s.phone, ui.PLAIN); val g = ui.field("GST number", s.gst, ui.PLAIN)
-        val legal = ui.field("Company line (first line, e.g. Falah Retail Limited Trading as)", s.legal); val cin = ui.field("CIN number", s.cin, ui.PLAIN)
+        val legal = ui.field("Store name – line 1", s.legal); val cin = ui.field("CIN number", s.cin, ui.PLAIN)
         val r1 = ui.field("Regd. office line 1", s.regd1); val r2 = ui.field("Regd. office line 2", s.regd2); val r3 = ui.field("Regd. office line 3", s.regd3)
         val site = ui.field("Website / store brand name (e.g. falah.com)", s.site, ui.URI); val mail = ui.field("Support email (printed as Email:...)", s.email, ui.EMAIL)
         val till = ui.field("Default till number", t.till, ui.NUM); val by = ui.field("Default 'Created by'", t.createdBy); val pay = ui.field("Default payment method", t.payment)

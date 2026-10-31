@@ -150,7 +150,7 @@ class InvoiceScreen(private val act: MainActivity) {
             f("Created by", d.createdBy) { d.createdBy = it }, dt, f("Payment method", d.pay) { d.pay = it },
             f("Last four digits", d.last4, ui.NUM) { d.last4 = it }, f("Transaction reference", d.txnRef, ui.NUM) { d.txnRef = it },
             f("Transaction ID (barcode)", d.txnId) { d.txnId = it },
-            ui.h2("Store (this invoice only)"), f("Company line (e.g. Falah Retail Limited Trading as)", d.legal) { d.legal = it }, f("Store name", d.sName) { d.sName = it }, f("Address line 1", d.s1) { d.s1 = it }, f("Address line 2", d.s2) { d.s2 = it },
+            ui.h2("Store (this invoice only)"), f("Store name – line 1", d.legal) { d.legal = it }, f("Store name – line 2", d.sName) { d.sName = it }, f("Address line 1", d.s1) { d.s1 = it }, f("Address line 2", d.s2) { d.s2 = it },
             f("Address line 3", d.s3) { d.s3 = it }, f("Phone number", d.sPhone) { d.sPhone = it }, f("GST number", d.gst) { d.gst = it }, f("CIN number", d.cin) { d.cin = it },
             f("Regd. office line 1", d.regd1) { d.regd1 = it }, f("Regd. office line 2", d.regd2) { d.regd2 = it }, f("Regd. office line 3", d.regd3) { d.regd3 = it },
             f("Website / store brand name (e.g. falah.com)", d.site) { d.site = it }, f("Support email", d.email, ui.EMAIL) { d.email = it },
